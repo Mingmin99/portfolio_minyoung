@@ -1,24 +1,61 @@
 ---
 layout: base
 ---
+<style>
+    .main-cover {
 
-<div class="p-5 mb-4 bg-body-tertiary rounded-3">
-    <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in
-            previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your
-            liking.</p>
-        <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        background-image: url("./img/book.jpg");
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
+    .search-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .search-container input[type="search"] {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .search-container button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+    <div class="main-cover">
+        <div class="search-container">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
-</div>
-<div>
-    민영 페이지에 오신것을 환영합니다
+    <footer>
+        하단정보
+    </footer>
 
-</div>
+</body>
+
+
+
+
+
+
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch demo modal
-</button>
+</button> -->
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -38,6 +75,3 @@ layout: base
         </div>
     </div>
 </div>
-<footer>
-    하단정보
-</footer>
