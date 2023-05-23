@@ -1,0 +1,65 @@
+---
+layout: base
+---
+<style>
+    body {
+        background-color: rgb(196, 193, 193);
+
+    }
+
+    .search-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 30px;
+        border-bottom: 5px solid rgb(58, 47, 45);
+        /* 아래쪽에 1픽셀 두께의 검은색 선 추가 */
+        width: 20%;
+        /* 원하는 길이 값으로 조정 */
+        margin-left: 40%;
+        /* 수평 가운데 정렬을 위한 마진 설정 */
+        border-radius: 10px;
+    }
+
+
+    .option-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+
+    }
+    .form-select{
+        height: 50px;
+    }
+    .input-group-text{
+        height: 50px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="search-title">
+        소장자료 검색
+    </div>
+
+    <div class="option-box">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">책 제목</option>
+            <option value="2">저자</option>
+            <option value="3">출판사</option>
+        </select>
+    </div>
+
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

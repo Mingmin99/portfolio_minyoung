@@ -25,9 +25,9 @@
 <body>
     <header>
         <nav id="nav">
-            <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+            <nav class="navbar navbar-expand-lg" style="background-color:rgb(177, 171, 160);">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">폴리도서관</a>
+        <a class="navbar-brand" href="#" style="color:rgb(23, 2, 2);">Poly Library</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
                     <a class="nav-link active" aria-current="page" href="/">홈</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about.html">자료검색</a>
+                    <a class="nav-link" href="/search.html">자료검색</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/company.html">도서대출</a>
@@ -49,59 +49,82 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/company.html">도서연장</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="/company.html">로그인</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/company.html">마이페이지</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
+
             </ul>
-            <!-- <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
         </div>
     </div>
 </nav>
+
         </nav>
-        <!-- 상단, 제목,,,
-        최민영 포트폴리오
-        <ul>
-            <li>
-                <a href="/">home</a>
-            </li>
-            <li>
-                <a href="/about">ab</a>
-            </li>
-            <li>
-                <a href="/company">company</a>
-            </li>
-        </ul> -->
 
     </header>
-    <div>
-    회사소개
-</div>
-<footer>
-    하단정보
-</footer>
+    <style>
+    body {
+        background-color: rgb(196, 193, 193);
+
+    }
+
+    .search-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 30px;
+        border-bottom: 5px solid rgb(58, 47, 45);
+        /* 아래쪽에 1픽셀 두께의 검은색 선 추가 */
+        width: 20%;
+        /* 원하는 길이 값으로 조정 */
+        margin-left: 40%;
+        /* 수평 가운데 정렬을 위한 마진 설정 */
+        border-radius: 10px;
+    }
+
+
+    .option-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+
+    }
+    .form-select{
+        height: 50px;
+    }
+    .input-group-text{
+        height: 50px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="search-title">
+        소장자료 검색
+    </div>
+
+    <div class="option-box">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+        <select class="form-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">책 제목</option>
+            <option value="2">저자</option>
+            <option value="3">출판사</option>
+        </select>
+    </div>
+
+
+    <footer>
+
+    </footer>
 </body>
 
 </html>

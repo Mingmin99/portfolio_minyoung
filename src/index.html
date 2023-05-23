@@ -5,44 +5,128 @@ layout: base
     .main-cover {
 
         background-image: url("./img/book.jpg");
-        height: 500px;
+        height: 600px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
 
     }
+
     .search-container {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        width: 100%;
+        max-width: 400px;
     }
-    
+
     .search-container input[type="search"] {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         padding: 10px;
         font-size: 16px;
+        box-sizing: border-box;
     }
-    
+
     .search-container button[type="submit"] {
         padding: 10px 20px;
         font-size: 16px;
         margin-left: 10px;
+    }
+
+
+    #dynamic-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 24px;
+        white-space: nowrap;
+        /* 한 줄로 텍스트 표시 */
+    }
+
+    footer {
+        position: relative;
+        background-color: #f5f5f5;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .bottom-box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .library-info {
+        margin: 0 10px;
     }
 </style>
 
 <body>
     <div class="main-cover">
         <div class="search-container">
+            <p id="dynamic-text" class="text-center"></p>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
     </div>
+
+
+
+    <script class="word">
+        // JavaScript 코드
+        window.addEventListener('load', function () {
+            var dynamicText = document.getElementById('dynamic-text');
+            var quotes = [
+                "책은 마음을 여는 열쇠다. - 볼테르",
+                "독서는 마음의 양식이다. - 테레사 드 칼쿠타",
+                "한 권의 책은 수천 개의 친구보다 가치가 있다. - 명심보감",
+                "책은 삶을 확장시키는 창이다. - 존슨",
+                "독서는 생각의 운동이다. - 에머슨",
+                "책 없는 생활은 새 없는 하늘과 같다. - 루소",
+                "책을 통해 과거로 여행하고 미래를 꿈꾼다. - 엘리자베스 후어",
+                "책은 마음의 약속이다. - 소포클레스",
+                "독서는 육체와 영혼을 위한 최고의 음식이다. - 도로시 파커",
+                "책은 우리가 되고자 하는 사람으로 우리를 이끌어준다. - 마하트마 간디",
+                "책은 우리에게 날개를 달아준다. - 칼리루지베르",
+                "책은 잊혀진 시대의 목소리다. - 카를라 팔라니크",
+                "책을 읽는 것은 새로운 세계로의 여행이다. - 말리브루",
+                "책은 항상 우리 곁에 있는 무한한 친구다. - 헨리 데이비드 소로",
+                "독서는 마음의 정원을 가꾸는 것이다. - 스튜어트 체이스",
+                "책은 마음을 치유하고 영감을 주는 의약품이다. - 윌리엄 엘톤",
+                "책은 우리가 경험하지 않은 세상으로의 문을 열어준다. - 말콤 X",
+                "독서는 단단한 삶의 기둥이다. - 로버트 파로",
+                "책은 삶의 여행에서 가장 신뢰할 수 있는 동반자다. - 에이미 헨리"
+            ];
+
+            // 무작위로 문구를 선택하여 표시하는 함수
+            function setDynamicText() {
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                dynamicText.innerText = quotes[randomIndex];
+            }
+
+            // 페이지 로드 시 초기 문구 설정
+            setDynamicText();
+
+            // 새로고침할 때마다 문구 갱신
+            window.addEventListener('beforeunload', setDynamicText);
+        });
+    </script>
+
+    </div>
     <footer>
-        하단정보
+        <div class="bottom-box">
+            <div class="library-info">폴리도서관</div>
+            <div class="library-info">광명시 소하일로7</div>
+            <div class="library-info">Tel. 02-2680-0900</div>
+            <div class="library-info">Fax. 02-2680-0919</div>
+        </div>
     </footer>
 
 </body>
