@@ -1,0 +1,134 @@
+---
+layout : base
+---
+<style>
+
+
+    header>div {
+        display: flex;
+        justify-content: center;
+        /* 가로 중앙 정렬 */
+        align-items: center;
+        /* 세로 중앙 정렬 */
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 세로 중앙 정렬 */
+    }
+
+    label {
+        align-items: left;
+        /* 세로 중앙 정렬 */
+        text-align: left;
+        /* 가운데 정렬 */
+        font-size: 25px;
+
+    }
+
+    input {
+        border: 3px solid black;
+        height: 50px;
+        width: 300px;
+        font-size: 25px;
+    }
+
+    .login-button {
+        font-size: 25px;
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* 스타일 변경 */
+    .no-link {
+        text-decoration: none;
+        color: black;
+        cursor: default;
+    }
+
+    /* 활성 링크 스타일 유지 */
+    .no-link:hover,
+    .no-link:active {
+        color: inherit;
+        cursor: default;
+    }
+
+    .signin {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* 원하는 간격을 설정합니다 */
+    }
+
+    .login-button-wrap button {
+        padding: 10px 20px;
+        /* 버튼 안의 내용과 버튼의 상하좌우 여백을 조정합니다 */
+        font-size: 16px;
+        /* 버튼의 글꼴 크기를 조정합니다 */
+    }
+    .login-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 30px;
+        border-bottom: 5px solid rgb(58, 47, 45);
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        border-color: darkgray;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <br><br><br><br>
+    <main>
+        <div class="main-container">
+            <div class="main-wrap">
+                <header>
+                    <div class="sel-lang-wrap">
+                    </div>
+                </header>
+                <div class="login-title">로그인</div>
+
+                
+                <section class="login-input-section-wrap">
+                    <div>Username</div>
+                    <div class="login-input-wrap">
+                        <input placeholder="Username" type="text"></input>
+                    </div>
+                    </br>
+                    <div>Password</div>
+                    <div class="login-input-wrap password-wrap">
+                        <input placeholder="Password" type="password"></input>
+                    </div>
+                    </br>
+                    <div class="login-button-wrap">
+                        <button>Sign in</button>
+                    </div>
+                    <div class="login-stay-sign-in">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-dark" onclick="login()">로그인</button>
+
+
+
+
+    </main>
+</body>

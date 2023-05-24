@@ -1,0 +1,161 @@
+---
+layout: base
+---
+<style>
+    body {
+        background-color: rgb(235, 231, 231);
+        background-image: url("./img/whiteblock.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: contrast(1px);
+
+
+    }
+
+    .search-title {
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        border-bottom: 5px solid rgb(58, 47, 45);
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        border-color: darkgray;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+    .search-container {
+        max-width: 700px;
+        height: 220px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border: 3px solid darkgray;
+        /* 추가된 부분: 1px 두께의 검은색 테두리 */
+
+        /* 추가된 부분: 내부 여백 설정 */
+        border-radius: 20px;
+
+
+    }
+
+    .option-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-check-inline {
+        margin-right: 10px;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .search-box input[type="text"] {
+        width: 70%;
+        margin-right: 10px;
+        height: 35px;
+    }
+
+    .search-box button {
+        width: 20%;
+        height: 35px;
+        background-color: rgb(72, 52, 31);
+    }
+
+    .card-img-top {
+        /* 이미지의 가로 크기를 조절합니다 */
+        height: 700px;
+        /* 세로 크기는 자동으로 조절됩니다 */
+        filter: blur(0px);
+        /* 블러 효과를 적용합니다 */
+    }
+
+    .form-check-input:checked+.form-check-label {
+        color: rgb(120, 0, 0);
+        /* 체크박스가 선택된 경우, 라벨의 텍스트 색상을 파란색으로 변경 */
+    }
+
+    /* 추가된 부분: 체크박스의 커스텀 스타일링 */
+    .form-check-input:checked+.form-check-label::before {
+        background-color: antiquewhite;
+        /* 체크박스가 선택된 경우, 체크 표시의 배경색을 파란색으로 변경 */
+        border-color: aliceblue;
+        /* 체크박스가 선택된 경우, 체크 표시의 테두리 색상을 파란색으로 변경 */
+    }
+
+    .row {
+        margin-left: 10%;
+        width: 80%;
+        margin-top: 3%;
+
+    }
+</style>
+</head>
+
+<body>
+    <div class="search-title">
+        도서대출 
+    </div>
+
+    </div>
+
+    <div class="search-container">
+        </br>
+        <div class="option-box">
+            <div>
+                CHECK&nbsp&nbsp&nbsp;
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    도서 제목
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    도서 저자
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    도서 출판사
+                </label>
+
+            </div>
+
+        </div>
+        </br>
+
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="도서제목을 입력하세요">
+            <button type="button" class="btn btn-primary">검색</button>
+        </div>
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="도서저자를 입력하세요">
+            <button type="button" class="btn btn-primary">검색</button>
+        </div>
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="출판사를 입력하세요">
+            <button type="button" class="btn btn-primary">검색</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
