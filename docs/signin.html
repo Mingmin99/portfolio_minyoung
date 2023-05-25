@@ -81,136 +81,75 @@
 
     </header>
 
-    <style>
-
-
-    header>div {
-        display: flex;
-        justify-content: center;
-        /* 가로 중앙 정렬 */
-        align-items: center;
-        /* 세로 중앙 정렬 */
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* 세로 중앙 정렬 */
-    }
-
-    label {
-        align-items: left;
-        /* 세로 중앙 정렬 */
-        text-align: left;
-        /* 가운데 정렬 */
-        font-size: 25px;
-
-    }
-
-    input {
-        border: 3px solid black;
-        height: 50px;
-        width: 300px;
-        font-size: 25px;
-    }
-
-    .login-button {
-        font-size: 25px;
-        border: 2px solid black;
-        border-radius: 20px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    /* 스타일 변경 */
-    .no-link {
-        text-decoration: none;
-        color: black;
-        cursor: default;
-    }
-
-    /* 활성 링크 스타일 유지 */
-    .no-link:hover,
-    .no-link:active {
-        color: inherit;
-        cursor: default;
-    }
-
-    .signin {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        /* 원하는 간격을 설정합니다 */
-    }
-
-    .login-button-wrap button {
-        padding: 10px 20px;
-        /* 버튼 안의 내용과 버튼의 상하좌우 여백을 조정합니다 */
-        font-size: 16px;
-        /* 버튼의 글꼴 크기를 조정합니다 */
-    }
-    .login-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 30px;
-        border-bottom: 5px solid rgb(58, 47, 45);
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 5px;
-        border-color: darkgray;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-</style>
+    <head>
+    <link rel="stylesheet" href="signin.css">
+    <script src="signin.js"></script>
 
 </head>
 
 <body>
-    <header>
-    </header>
-    <br><br><br><br>
-    <main>
-        <div class="main-container">
-            <div class="main-wrap">
-                <header>
-                    <div class="sel-lang-wrap">
-                    </div>
-                </header>
-                <div class="login-title">로그인</div>
+    <div class="box-text">
+        <h2>로그인 또는 회원가입</h2>
+        <p>사용자 계정으로 로그인하거나 새로운 계정을 생성하세요.</p>
+    </div>
 
-                
-                <section class="login-input-section-wrap">
-                    <div>Username</div>
-                    <div class="login-input-wrap">
-                        <input placeholder="Username" type="text"></input>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sign-up-container">
+                <form>
+                    <h1>Create Account</h1>
+                    <div class="social-links">
+                        <div>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
                     </div>
-                    </br>
-                    <div>Password</div>
-                    <div class="login-input-wrap password-wrap">
-                        <input placeholder="Password" type="password"></input>
+                    <span>or use your email for registration</span>
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button class="form_btn">Sign Up</button>
+                </form>
+            </div>
+            <div class="sign-in-container">
+                <form>
+                    <h1>Sign In</h1>
+                    <div class="social-links">
+                        <div>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
                     </div>
-                    </br>
-                    <div class="login-button-wrap">
-                        <button>Sign in</button>
-                    </div>
-                    <div class="login-stay-sign-in">
-                        <i class="far fa-check-circle"></i>
-                    </div>
-                </section>
+                    <span>or use your account</span>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button class="form_btn">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay-left">
+                    <h1>Welcome Back</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button id="signIn" class="overlay_btn">Sign In</button>
+                </div>
+                <div class="overlay-right">
+                    <h1>Hello, Friend</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button id="signUp" class="overlay_btn">Sign Up</button>
+                </div>
             </div>
         </div>
-        <br>
-        <br>
-        <button type="button" class="btn btn-dark" onclick="login()">로그인</button>
-
-
-
-
-    </main>
+    </div>
 </body>
     <footer>
         <div class="bottom-box">
