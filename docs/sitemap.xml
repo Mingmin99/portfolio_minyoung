@@ -33,7 +33,4 @@
 <url>
 <loc>http://localhost:4000/signin.html</loc>
 </url>
-<url>
-<loc>http://localhost:4000/signup.html</loc>
-</url>
 </urlset>

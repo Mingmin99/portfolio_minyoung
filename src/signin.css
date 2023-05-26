@@ -16,15 +16,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ebecf0;
+    margin-top: -50px;
+    /* background: #ebecf0; */
     overflow: hidden;
 }
 
 .container {
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
     position: absolute;
-    width: 768px;
+    width: 1000px;
     min-height: 480px;
     overflow: hidden;
 }
