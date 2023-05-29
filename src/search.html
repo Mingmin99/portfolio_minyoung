@@ -3,42 +3,59 @@ layout: base
 ---
 <style>
     body {
-        background-color: rgb(235, 231, 231);
-        background-image: url("./img/whiteblock.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        filter: contrast(1px);
-
-
+        background-color: #D9D9D9;
     }
 
     .search-title {
-        margin-top: 3%;
+        margin-top: 2%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        width: 20%;
+        margin-left: 80px;
+        border-radius: 5px;
+        border-bottom: 10px double rgb(87, 72, 69);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .search-description{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 30px;
+        width: 30%;
+        margin-left: 80px;
+    }
+    .search{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-size:35px;
+        margin-top: 30px;
+        margin-bottom: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding-top: 20px;
-        margin-bottom: 30px;
-        font-size: 30px;
-        border-bottom: 5px solid rgb(58, 47, 45);
-        width: 20%;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 5px;
-        border-color: darkgray;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .search-explain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        color:rgb(22, 22, 97);
 
     }
-
-
     .search-container {
-        max-width: 700px;
-        height: 220px;
+        max-width: 800px;
+        height: 400px;
         margin: 0 auto;
         margin-bottom: 20px;
-        border: 3px solid darkgray;
+        border: 1px groove darkgray;
         /* 추가된 부분: 1px 두께의 검은색 테두리 */
 
         /* 추가된 부분: 내부 여백 설정 */
@@ -51,6 +68,7 @@ layout: base
         display: flex;
         justify-content: center;
         align-items: center;
+      
     }
 
     .form-check-inline {
@@ -65,14 +83,14 @@ layout: base
     }
 
     .search-box input[type="text"] {
-        width: 70%;
+        width: 50%;
         margin-right: 10px;
-        height: 35px;
+        height: 50px;
     }
 
     .search-box button {
         width: 20%;
-        height: 35px;
+        height: 40px;
         background-color: rgb(72, 52, 31);
     }
 
@@ -106,15 +124,24 @@ layout: base
 </head>
 
 <body>
+
+
+
+
+
+
+    
     <div class="search-title">
-        소장자료 검색
+        &nbsp;&nbsp;통합자료 검색
     </div>
-    <div>
+    <div class="search-description">원하시는 도서자료를 옵션 검색을 통해 찾아보세요.</div>
+        </div>
         <div class="search-container">
+            <div class="search">SEARCH </div>
             </br>
             <div class="option-box">
                 <div>
-                    CHECK&nbsp&nbsp&nbsp;
+                    OPTION&nbsp&nbsp&nbsp;
                 </div>
                 <div class="form-check-inline">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -148,7 +175,106 @@ layout: base
                 <input type="text" class="form-control" placeholder="출판사를 입력하세요">
                 <button type="button" class="btn btn-primary">검색</button>
             </div>
+            <div class="search-explain"> * 한 항목만 입력해도 검색이 가능하며, 두 항목 이상 입력하면 좀 더 정확하게 검색을 할 수 있습니다.
+            </div>
         </div>
+       
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">세이노의 가르침</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">헤아림의 조각들</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">익명소설</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">점프 투 파이썬</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">세이노의 가르침</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">헤아림의 조각들</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">익명소설</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">점프 투 파이썬</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <div class="col">
+                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">세이노의 가르침</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">헤아림의 조각들</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">익명소설</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
+                    </div>
+                    <div class="col">
+                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
+                        <div class="p-3">점프 투 파이썬</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+
     </div>
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -243,7 +369,8 @@ layout: base
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
 
+
+    </div>
 
 </body>
