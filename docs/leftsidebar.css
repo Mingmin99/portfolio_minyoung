@@ -1,0 +1,96 @@
+/*노멀라이즈*/
+body,
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*노말라이즈 끝*/
+
+/*좌측사이드바*/
+.left-side-bar {
+    color: rgb(255, 244, 244);
+    background-color: rgb(123, 121, 121);
+    width: 200px;
+    height: 150px;
+    left: -160px;
+    margin-top: 100px;
+    top: 0;
+    position: fixed;
+    transition: left .3s;
+    border-radius: 5px;
+
+}
+
+
+.left-side-bar:hover {
+    left: 0;
+}
+
+/*좌측사이드바-아이콘*/
+.left-side-bar>.icon-status>span {
+    height: 40px;
+    font-size: 20px;
+    text-align: right;
+    display: block;
+    border-radius: 5px;
+    
+}
+
+.left-side-bar>.icon-status>span:last-child {
+    display: none;
+}
+
+.left-side-bar:hover>.icon-status>span:last-child {
+    display: block;
+}
+
+.left-side-bar:hover>.icon-status>span:first-child {
+    display: none;
+}
+
+/*좌측사이드바-아이콘 끝*/
+
+/*좌측사이드바-메뉴박스*/
+.left-side-bar>.menu-box-1>ul ul {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border-radius:5px
+    
+}
+
+.left-side-bar>.menu-box-1 ul {
+    background-color: rgb(123, 121, 121);
+    border-radius: 5px
+
+    
+}
+
+.left-side-bar>.menu-box-1 ul>li {
+    position: relative;
+}
+
+.left-side-bar>.menu-box-1 ul>li>a {
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
+    border-radius: 5px
+}
+
+.left-side-bar .menu-box-1 ul>li:hover>a {
+    background-color: #a4a4a4;
+    color: black;
+}
+
+.left-side-bar>.menu-box-1>ul>li:hover>ul {
+    display: block;
+}

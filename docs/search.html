@@ -11,7 +11,7 @@
         footer {
             width: 100%;
             display: flex;
-            background-color: #6a6767;
+            background-color: #7C96AB;
             align-items: center;
             /* 변경된 부분 */
             justify-content: center;
@@ -148,9 +148,12 @@
 
     </header>
 
-    <style>
+    <head>
+    <link rel="stylesheet" type="text/css" href="leftsidebar.css">
+</head>
+<style>
     body {
-        background-color: #D9D9D9;
+        background-color:lightgray;
     }
 
     .search-title {
@@ -163,7 +166,7 @@
         margin-bottom: 10px;
         font-size: 30px;
         width: 20%;
-        margin-left: 80px;
+        margin-left: 100px;
         border-radius: 5px;
         border-bottom: 10px double rgb(87, 72, 69);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -176,7 +179,7 @@
         padding-top: 20px;
         margin-bottom: 30px;
         width: 30%;
-        margin-left: 80px;
+        margin-left: 100px;
     }
     .search{
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -215,7 +218,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-      
     }
 
     .form-check-inline {
@@ -238,7 +240,7 @@
     .search-box button {
         width: 20%;
         height: 40px;
-        background-color: rgb(72, 52, 31);
+        background-color: #7C96AB;
     }
 
     .card-img-top {
@@ -250,7 +252,7 @@
     }
 
     .form-check-input:checked+.form-check-label {
-        color: rgb(120, 0, 0);
+        color: #52687b;
         /* 체크박스가 선택된 경우, 라벨의 텍스트 색상을 파란색으로 변경 */
     }
 
@@ -272,12 +274,60 @@
 
 <body>
 
+<!--좌측사이드바-->
+<div class="left-side-bar">
+    <!--좌측사이드바-아이콘-->
+    <div class="icon-status">
+        <span>▶ &nbsp;&nbsp;</span>
+        <span>MENU  ▼&nbsp;&nbsp;</span>
+    </div>
+    <!--좌측사이드바-아이콘 끝-->
+    <!--좌측사이드바-메뉴박스-->
+    <nav class="menu-box-1">
+        <ul>
+            <li>
+                <a href="./index.html">○&nbsp;&nbsp;홈 메뉴 </a>
+                <ul>
+                </ul>
+            </li>
+            <li>
+                <a href="./search.html">○&nbsp;&nbsp;자료검색</a>
+                <ul>
+                    <li>
+                        <a href="./search.html">&nbsp; 통합자료 검색 &nbsp;</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">○&nbsp;&nbsp;도서관리</a>
+                <ul>
+                    <li>
+                        <a href="./loan.html">&nbsp; 도서대출 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./return.html">&nbsp; 도서반납 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./extend.html">&nbsp; 도서연장 &nbsp;</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">○&nbsp;&nbsp;마이페이지</a>
+                <ul>
+                    <li>
+                        <a href="./signin.html"> &nbsp; 회원가입 / 로그인 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html">&nbsp; 마이페이지 관리 &nbsp;</a>
+                    </li>
+                </ul>
+        </ul>
+    </nav>
+    <!--좌측사이드바-메뉴박스-->
+</div>
+<!--좌측사이드바 끝-->
 
-
-
-
-
-    
     <div class="search-title">
         &nbsp;&nbsp;통합자료 검색
     </div>
@@ -420,8 +470,6 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-
-
     </div>
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -516,10 +564,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-
-
     </div>
-
+<div></br></br></br></br></br></br></br></br></br></br></div>
 </body>
     <div class="f_menu">
         <div class="in" style="padding: 10px;">
@@ -567,6 +613,7 @@
                                         02-2680-6640</span></li>
                             </ul>
                         </div>
+                    </br>
                         <p class="copyright">Copyright ⓒ 2020 폴리도서관. All rights reserved.</p>
                     </div>
                 </div>

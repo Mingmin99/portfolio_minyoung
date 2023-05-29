@@ -5,7 +5,11 @@ layout : base
 <head>
     <link rel="stylesheet" href="signin.css">
     <script src="signin.js"></script>
+    <link rel="stylesheet" type="text/css" href="leftsidebar.css">
 <style>
+      body{
+        background-color: #e8e6e6;
+    }
     .signin-title {
         margin-top: 3%;
         display: flex;
@@ -28,13 +32,66 @@ layout : base
         height: 100px;
         margin-top: 50px;
     }
-    body{
-        background-color: lightgray;
-    }
+
 </style>
 </head>
 
 <body>
+    
+   
+<!--좌측사이드바-->
+<div class="left-side-bar">
+    <!--좌측사이드바-아이콘-->
+    <div class="icon-status">
+        <span>▶ &nbsp;&nbsp;</span>
+        <span>MENU  ▼&nbsp;&nbsp;</span>
+    </div>
+    <!--좌측사이드바-아이콘 끝-->
+    <!--좌측사이드바-메뉴박스-->
+    <nav class="menu-box-1">
+        <ul>
+            <li>
+                <a href="./index.html">○&nbsp;&nbsp;홈 메뉴 </a>
+                <ul>
+                </ul>
+            </li>
+            <li>
+                <a href="./search.html">○&nbsp;&nbsp;자료검색</a>
+                <ul>
+                    <li>
+                        <a href="./search.html">&nbsp; 통합자료 검색 &nbsp;</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">○&nbsp;&nbsp;도서관리</a>
+                <ul>
+                    <li>
+                        <a href="./loan.html">&nbsp; 도서대출 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./return.html">&nbsp; 도서반납 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./extend.html">&nbsp; 도서연장 &nbsp;</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">○&nbsp;&nbsp;마이페이지</a>
+                <ul>
+                    <li>
+                        <a href="./signin.html"> &nbsp; 회원가입 / 로그인 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html">&nbsp; 마이페이지 관리 &nbsp;</a>
+                    </li>
+                </ul>
+        </ul>
+    </nav>
+    <!--좌측사이드바-메뉴박스-->
+</div>
+<!--좌측사이드바 끝-->
     <div class="box-text">
         <div class="signin-title">
         회원가입 / 로그인 

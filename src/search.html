@@ -1,9 +1,13 @@
 ---
 layout: base
 ---
+
+<head>
+    <link rel="stylesheet" type="text/css" href="leftsidebar.css">
+</head>
 <style>
     body {
-        background-color: #D9D9D9;
+        background-color:lightgray;
     }
 
     .search-title {
@@ -16,7 +20,7 @@ layout: base
         margin-bottom: 10px;
         font-size: 30px;
         width: 20%;
-        margin-left: 80px;
+        margin-left: 100px;
         border-radius: 5px;
         border-bottom: 10px double rgb(87, 72, 69);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -29,7 +33,7 @@ layout: base
         padding-top: 20px;
         margin-bottom: 30px;
         width: 30%;
-        margin-left: 80px;
+        margin-left: 100px;
     }
     .search{
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -68,7 +72,6 @@ layout: base
         display: flex;
         justify-content: center;
         align-items: center;
-      
     }
 
     .form-check-inline {
@@ -91,7 +94,7 @@ layout: base
     .search-box button {
         width: 20%;
         height: 40px;
-        background-color: rgb(72, 52, 31);
+        background-color: #7C96AB;
     }
 
     .card-img-top {
@@ -103,7 +106,7 @@ layout: base
     }
 
     .form-check-input:checked+.form-check-label {
-        color: rgb(120, 0, 0);
+        color: #52687b;
         /* 체크박스가 선택된 경우, 라벨의 텍스트 색상을 파란색으로 변경 */
     }
 
@@ -125,12 +128,60 @@ layout: base
 
 <body>
 
+<!--좌측사이드바-->
+<div class="left-side-bar">
+    <!--좌측사이드바-아이콘-->
+    <div class="icon-status">
+        <span>▶ &nbsp;&nbsp;</span>
+        <span>MENU  ▼&nbsp;&nbsp;</span>
+    </div>
+    <!--좌측사이드바-아이콘 끝-->
+    <!--좌측사이드바-메뉴박스-->
+    <nav class="menu-box-1">
+        <ul>
+            <li>
+                <a href="./index.html">○&nbsp;&nbsp;홈 메뉴 </a>
+                <ul>
+                </ul>
+            </li>
+            <li>
+                <a href="./search.html">○&nbsp;&nbsp;자료검색</a>
+                <ul>
+                    <li>
+                        <a href="./search.html">&nbsp; 통합자료 검색 &nbsp;</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">○&nbsp;&nbsp;도서관리</a>
+                <ul>
+                    <li>
+                        <a href="./loan.html">&nbsp; 도서대출 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./return.html">&nbsp; 도서반납 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./extend.html">&nbsp; 도서연장 &nbsp;</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">○&nbsp;&nbsp;마이페이지</a>
+                <ul>
+                    <li>
+                        <a href="./signin.html"> &nbsp; 회원가입 / 로그인 &nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html">&nbsp; 마이페이지 관리 &nbsp;</a>
+                    </li>
+                </ul>
+        </ul>
+    </nav>
+    <!--좌측사이드바-메뉴박스-->
+</div>
+<!--좌측사이드바 끝-->
 
-
-
-
-
-    
     <div class="search-title">
         &nbsp;&nbsp;통합자료 검색
     </div>
@@ -273,8 +324,6 @@ layout: base
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-
-
     </div>
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
@@ -369,8 +418,6 @@ layout: base
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-
-
     </div>
-
+<div></br></br></br></br></br></br></br></br></br></br></div>
 </body>
