@@ -61,6 +61,7 @@
         }
 
         .f_menu {
+            padding: 15px;
             background-color: white;
             display: flex;
             justify-content: center;
@@ -101,7 +102,7 @@
     </div>
     <header>
         <nav id="nav">
-            <nav class="navbar navbar-expand-lg" style="background-color:whitesmoke; min-height: 100px;">
+            <nav class="navbar navbar-expand-lg" style="background-color:white; min-height: 100px;">
     <div class="container-fluid">
         <a class="navbar-brand" href="#" style="color:rgb(23, 2, 2);"> <a class="navbar-brand" href="/index.html"
                 style="color:rgb(23, 2, 2);">
@@ -153,26 +154,33 @@
     <script src="signin.js"></script>
     <link rel="stylesheet" type="text/css" href="leftsidebar.css">
 <style>
-      body{
-        background-color: #e8e6e6;
+    body{
+        background-color: #F4F4F4;
     }
-    .signin-title {
-        margin-top: 3%;
+    .search-title {
+        margin-top: 2%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        width: 17%;
+        margin-left: 100px;
+        border-radius: 5px;
+        border-bottom: 10px double rgb(87, 72, 69);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .search-description{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
         text-align: center;
         padding-top: 20px;
         margin-bottom: 30px;
-        font-size: 30px;
-        border-bottom: 5px solid rgb(58, 47, 45);
-        width: 20%;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 5px;
-        border-color: darkgray;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+        width: 50%;
+        margin-left: 100px;
     }
     .box-text{
         height: 100px;
@@ -182,9 +190,7 @@
 </style>
 </head>
 
-<body>
-    
-   
+<body>  
 <!--좌측사이드바-->
 <div class="left-side-bar">
     <!--좌측사이드바-아이콘-->
@@ -238,12 +244,11 @@
     <!--좌측사이드바-메뉴박스-->
 </div>
 <!--좌측사이드바 끝-->
-    <div class="box-text">
-        <div class="signin-title">
-        회원가입 / 로그인 
-        </div>
-        
-        <div>사용자 계정으로 로그인하거나 새로운 계정을 생성하여 폴리도서관을 더욱 편리하게 이용하세요.</div>
+
+<div class="search-title">
+    &nbsp;&nbsp;회원가입 / 로그인 
+</div>
+<div class="search-description">사용자 계정으로 로그인하거나 새로운 계정을 생성하여 폴리도서관을 더욱 편리하게 이용하세요.</div>
     </div>
     <div class="wrapper">
         <div class="container">
