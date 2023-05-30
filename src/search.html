@@ -7,7 +7,7 @@ layout: base
 </head>
 <style>
     body {
-        background-color:#F4F4F4;
+        background-color: #F4F4F4;
     }
 
     .search-title {
@@ -25,7 +25,8 @@ layout: base
         border-bottom: 10px double rgb(87, 72, 69);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
-    .search-description{
+
+    .search-description {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -35,9 +36,10 @@ layout: base
         width: 30%;
         margin-left: 100px;
     }
-    .search{
+
+    .search {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        font-size:35px;
+        font-size: 35px;
         margin-top: 30px;
         margin-bottom: 10px;
         display: flex;
@@ -45,15 +47,17 @@ layout: base
         align-items: center;
         text-align: center;
     }
-    .search-explain{
+
+    .search-explain {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         margin-top: 20px;
-        color:rgb(22, 22, 97);
+        color: rgb(22, 22, 97);
 
     }
+
     .search-container {
         max-width: 800px;
         height: 400px;
@@ -121,6 +125,24 @@ layout: base
     .row {
         margin-left: 10%;
         width: 80%;
+        margin-top: 0.5%;
+    }
+
+    .bestseller {
+        font-size: 25px;
+        text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.2);
+        margin-top: 5%;
+    }
+
+    .newpublish {
+        font-size: 25px;
+        text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.2);
+        margin-top: 3%;
+    }
+
+    .recbook {
+        font-size: 25px;
+        text-shadow: 2px 2px 3px rgb(0, 0, 0, 0.2);
         margin-top: 3%;
     }
 </style>
@@ -128,110 +150,461 @@ layout: base
 
 <body>
 
-<!--좌측사이드바-->
-<div class="left-side-bar">
-    <!--좌측사이드바-아이콘-->
-    <div class="icon-status">
-        <span>▶ &nbsp;&nbsp;</span>
-        <span>MENU  ▼&nbsp;&nbsp;</span>
+    <!--좌측사이드바-->
+    <div class="left-side-bar">
+        <!--좌측사이드바-아이콘-->
+        <div class="icon-status">
+            <span>▶ &nbsp;&nbsp;</span>
+            <span>MENU ▼&nbsp;&nbsp;</span>
+        </div>
+        <!--좌측사이드바-아이콘 끝-->
+        <!--좌측사이드바-메뉴박스-->
+        <nav class="menu-box-1">
+            <ul>
+                <li>
+                    <a href="./index.html">○&nbsp;&nbsp;홈 메뉴 </a>
+                    <ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="./search.html">○&nbsp;&nbsp;자료검색</a>
+                    <ul>
+                        <li>
+                            <a href="./search.html">&nbsp; 통합자료 검색 &nbsp;</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">○&nbsp;&nbsp;도서관리</a>
+                    <ul>
+                        <li>
+                            <a href="./loan.html">&nbsp; 도서대출 &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="./return.html">&nbsp; 도서반납 &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="./extend.html">&nbsp; 도서연장 &nbsp;</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">○&nbsp;&nbsp;마이페이지</a>
+                    <ul>
+                        <li>
+                            <a href="./signin.html"> &nbsp; 회원가입 / 로그인 &nbsp;</a>
+                        </li>
+                        <li>
+                            <a href="./mypage.html">&nbsp; 마이페이지 관리 &nbsp;</a>
+                        </li>
+                    </ul>
+            </ul>
+        </nav>
+        <!--좌측사이드바-메뉴박스-->
     </div>
-    <!--좌측사이드바-아이콘 끝-->
-    <!--좌측사이드바-메뉴박스-->
-    <nav class="menu-box-1">
-        <ul>
-            <li>
-                <a href="./index.html">○&nbsp;&nbsp;홈 메뉴 </a>
-                <ul>
-                </ul>
-            </li>
-            <li>
-                <a href="./search.html">○&nbsp;&nbsp;자료검색</a>
-                <ul>
-                    <li>
-                        <a href="./search.html">&nbsp; 통합자료 검색 &nbsp;</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">○&nbsp;&nbsp;도서관리</a>
-                <ul>
-                    <li>
-                        <a href="./loan.html">&nbsp; 도서대출 &nbsp;</a>
-                    </li>
-                    <li>
-                        <a href="./return.html">&nbsp; 도서반납 &nbsp;</a>
-                    </li>
-                    <li>
-                        <a href="./extend.html">&nbsp; 도서연장 &nbsp;</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">○&nbsp;&nbsp;마이페이지</a>
-                <ul>
-                    <li>
-                        <a href="./signin.html"> &nbsp; 회원가입 / 로그인 &nbsp;</a>
-                    </li>
-                    <li>
-                        <a href="./mypage.html">&nbsp; 마이페이지 관리 &nbsp;</a>
-                    </li>
-                </ul>
-        </ul>
-    </nav>
-    <!--좌측사이드바-메뉴박스-->
-</div>
-<!--좌측사이드바 끝-->
+    <!--좌측사이드바 끝-->
 
     <div class="search-title">
         &nbsp;&nbsp;통합자료 검색
     </div>
     <div class="search-description">원하시는 도서자료를 옵션 검색을 통해 찾아보세요.</div>
-        </div>
-        <div class="search-container">
-            <div class="search">SEARCH </div>
-            </br>
-            <div class="option-box">
-                <div>
-                    OPTION&nbsp&nbsp&nbsp;
-                </div>
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        도서 제목
-                    </label>
-                </div>
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                        도서 저자
-                    </label>
-                </div>
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                        도서 출판사
-                    </label>
-                </div>
+    </div>
+    <div class="search-container">
+        <div class="search">SEARCH </div>
+        </br>
+        <div class="option-box">
+            <div>
+                OPTION&nbsp&nbsp&nbsp;
             </div>
-            </br>
-            <div class="search-box">
-                <input type="text" class="form-control" placeholder="도서제목을 입력하세요">
-                <button type="button" class="btn btn-primary">검색</button>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    도서 제목
+                </label>
             </div>
-            <div class="search-box">
-                <input type="text" class="form-control" placeholder="도서저자를 입력하세요">
-                <button type="button" class="btn btn-primary">검색</button>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    도서 저자
+                </label>
             </div>
-            <div class="search-box">
-                <input type="text" class="form-control" placeholder="출판사를 입력하세요">
-                <button type="button" class="btn btn-primary">검색</button>
-            </div>
-            <div class="search-explain"> * 한 항목만 입력해도 검색이 가능하며, 두 항목 이상 입력하면 좀 더 정확하게 검색을 할 수 있습니다.
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    도서 출판사
+                </label>
             </div>
         </div>
-       
+        </br>
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="도서제목을 입력하세요">
+            <button type="button" class="btn btn-primary">검색</button>
+        </div>
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="도서저자를 입력하세요">
+            <button type="button" class="btn btn-primary">검색</button>
+        </div>
+        <div class="search-box">
+            <input type="text" class="form-control" placeholder="출판사를 입력하세요">
+            <button type="button" class="btn btn-primary">검색</button>
+        </div>
+        <div class="search-explain"> * 한 항목만 입력해도 검색이 가능하며, 두 항목 이상 입력하면 좀 더 정확하게 검색을 할 수 있습니다.
+        </div>
+    </div>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators1" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="container text-center">
+            <div class="bestseller">
+                베스트셀러 도서
+            </div>
+            <div class="carousel-inner">
+                <!-- Carousel items will be dynamically generated -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <div id="carouselExampleIndicators2" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="container text-center">
+            <div class="newpublish">
+                신간 도서
+            </div>
+            <div class="carousel-inner">
+                <!-- Carousel items will be dynamically generated -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators3" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="container text-center">
+            <div class="newpublish">
+                나에게 추천하는 도서
+            </div>
+            <div class="carousel-inner">
+                <!-- Carousel items will be dynamically generated -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        function getHttpRequest(url, callback) {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function (event) {
+                if (request.readyState == 4) {
+                    if (request.status == 200) {
+                        // 요청이 정상적으로 처리된 경우
+                        console.log("success");
+                        callback(request.responseText);
+                    } else {
+                        // 에러가 발생한 경우
+                        console.error("Error occurred while making the request");
+                    }
+                }
+            };
+    
+            const method = "GET";
+            request.open('GET', url, true);
+            request.send();
+        }
+    
+        const url1 = "./bestseller.json";
+        getHttpRequest(url1, function (response) {
+            var json = JSON.parse(response);
+    
+            let carouselInner = document.querySelector("#carouselExampleIndicators1 .carousel-inner");
+    
+            let startIndex = 0;
+    
+            let carouselItem = document.createElement('div');
+            carouselItem.classList.add("carousel-item");
+            carouselItem.classList.add("active");
+    
+            let row = document.createElement('div');
+            row.classList.add("row");
+            row.classList.add("row-cols-2");
+            row.classList.add("row-cols-lg-5");
+            row.classList.add("g-2");
+            row.classList.add("g-lg-3");
+    
+            for (var j = startIndex; j < startIndex + 5 && j < json.length; j++) {
+                let col = document.createElement('div');
+                col.classList.add("col");
+    
+                let img = document.createElement('img');
+                img.src = json[j].image;
+                img.classList.add("img-fluid");
+                img.alt = "베스트셀러";
+                col.appendChild(img);
+    
+                let title = document.createElement('div');
+                title.classList.add("p-3");
+                title.textContent = json[j].title;
+                col.appendChild(title);
+    
+                row.appendChild(col);
+            }
+    
+            carouselItem.appendChild(row);
+            carouselInner.appendChild(carouselItem);
+    
+            const carousel = new bootstrap.Carousel(document.querySelector('#carouselExampleIndicators1'), {
+                interval: false
+            });
+    
+            let nextButton = document.querySelector('#carouselExampleIndicators1 .carousel-control-next');
+            nextButton.addEventListener('click', function () {
+                if (startIndex + 5 < json.length) {
+                    startIndex += 5;
+    
+                    let newCarouselItem = document.createElement('div');
+                    newCarouselItem.classList.add("carousel-item");
+    
+                    let newRow = document.createElement('div');
+                    newRow.classList.add("row");
+                    newRow.classList.add("row-cols-2");
+                    newRow.classList.add("row-cols-lg-5");
+                    newRow.classList.add("g-2");
+                    newRow.classList.add("g-lg-3");
+    
+                    for (var j = startIndex; j < startIndex + 5 && j < json.length; j++) {
+                        let col = document.createElement('div');
+                        col.classList.add("col");
+    
+                        let img = document.createElement('img');
+                        img.src = json[j].image;
+                        img.classList.add("img-fluid");
+                        img.alt = "베스트셀러";
+                        col.appendChild(img);
+    
+                        let title = document.createElement('div');
+                        title.classList.add("p-3");
+                        title.textContent = json[j].title;
+                        col.appendChild(title);
+    
+                        newRow.appendChild(col);
+                    }
+    
+                    newCarouselItem.appendChild(newRow);
+                    carouselInner.appendChild(newCarouselItem);
+    
+                    carousel.next();
+                }
+            });
+        });
+    
+        const url2 = "./newpublish.json";
+        getHttpRequest(url2, function (response) {
+            var json = JSON.parse(response);
+    
+            let carouselInner = document.querySelector("#carouselExampleIndicators2 .carousel-inner");
+    
+            let startIndex = 0;
+    
+            let carouselItem = document.createElement('div');
+            carouselItem.classList.add("carousel-item");
+            carouselItem.classList.add("active");
+    
+            let row = document.createElement('div');
+            row.classList.add("row");
+            row.classList.add("row-cols-2");
+            row.classList.add("row-cols-lg-5");
+            row.classList.add("g-2");
+            row.classList.add("g-lg-3");
+    
+            for (var j = startIndex; j < startIndex + 5 && j < json.length; j++) {
+                let col = document.createElement('div');
+                col.classList.add("col");
+    
+                let img = document.createElement('img');
+                img.src = json[j].image;
+                img.classList.add("img-fluid");
+                img.alt = "신간도서";
+                col.appendChild(img);
+    
+                let title = document.createElement('div');
+                title.classList.add("p-3");
+                title.textContent = json[j].title;
+                col.appendChild(title);
+    
+                row.appendChild(col);
+            }
+    
+            carouselItem.appendChild(row);
+            carouselInner.appendChild(carouselItem);
+    
+            const carousel = new bootstrap.Carousel(document.querySelector('#carouselExampleIndicators2'), {
+                interval: false
+            });
+    
+            let nextButton = document.querySelector('#carouselExampleIndicators2 .carousel-control-next');
+            nextButton.addEventListener('click', function () {
+                if (startIndex + 5 < json.length) {
+                    startIndex += 5;
+    
+                    let newCarouselItem = document.createElement('div');
+                    newCarouselItem.classList.add("carousel-item");
+    
+                    let newRow = document.createElement('div');
+                    newRow.classList.add("row");
+                    newRow.classList.add("row-cols-2");
+                    newRow.classList.add("row-cols-lg-5");
+                    newRow.classList.add("g-2");
+                    newRow.classList.add("g-lg-3");
+    
+                    for (var j = startIndex; j < startIndex + 5 && j < json.length; j++) {
+                        let col = document.createElement('div');
+                        col.classList.add("col");
+    
+                        let img = document.createElement('img');
+                        img.src = json[j].image;
+                        img.classList.add("img-fluid");
+                        img.alt = "신간도서";
+                        col.appendChild(img);
+    
+                        let title = document.createElement('div');
+                        title.classList.add("p-3");
+                        title.textContent = json[j].title;
+                        col.appendChild(title);
+    
+                        newRow.appendChild(col);
+                    }
+    
+                    newCarouselItem.appendChild(newRow);
+                    carouselInner.appendChild(newCarouselItem);
+    
+                    carousel.next();
+                }
+            });
+        });
+
+
+
+        const url3 = "./recbook.json";
+    getHttpRequest(url3, function (response) {
+        var json = JSON.parse(response);
+
+        let carouselInner = document.querySelector("#carouselExampleIndicators3 .carousel-inner");
+
+        let startIndex = 0;
+
+        let carouselItem = document.createElement('div');
+        carouselItem.classList.add("carousel-item");
+        carouselItem.classList.add("active");
+
+        let row = document.createElement('div');
+        row.classList.add("row");
+        row.classList.add("row-cols-2");
+        row.classList.add("row-cols-lg-5");
+        row.classList.add("g-2");
+        row.classList.add("g-lg-3");
+
+        for (var j = startIndex; j < startIndex + 5 && j < json.length; j++) {
+            let col = document.createElement('div');
+            col.classList.add("col");
+
+            let img = document.createElement('img');
+            img.src = json[j].image;
+            img.classList.add("img-fluid");
+            img.alt = "추천도서";
+            col.appendChild(img);
+
+            let title = document.createElement('div');
+            title.classList.add("p-3");
+            title.textContent = json[j].title;
+            col.appendChild(title);
+
+            row.appendChild(col);
+        }
+
+        carouselItem.appendChild(row);
+        carouselInner.appendChild(carouselItem);
+
+        const carousel = new bootstrap.Carousel(document.querySelector('#carouselExampleIndicators3'), {
+            interval: false
+        });
+
+        let nextButton = document.querySelector('#carouselExampleIndicators3 .carousel-control-next');
+        nextButton.addEventListener('click', function () {
+            if (startIndex + 5 < json.length) {
+                startIndex += 5;
+
+                let newCarouselItem = document.createElement('div');
+                newCarouselItem.classList.add("carousel-item");
+
+                let newRow = document.createElement('div');
+                newRow.classList.add("row");
+                newRow.classList.add("row-cols-2");
+                newRow.classList.add("row-cols-lg-5");
+                newRow.classList.add("g-2");
+                newRow.classList.add("g-lg-3");
+
+                for (var j = startIndex; j < startIndex + 5 && j < json.length; j++) {
+                    let col = document.createElement('div');
+                    col.classList.add("col");
+
+                    let img = document.createElement('img');
+                    img.src = json[j].image;
+                    img.classList.add("img-fluid");
+                    img.alt = "추천도서";
+                    col.appendChild(img);
+
+                    let title = document.createElement('div');
+                    title.classList.add("p-3");
+                    title.textContent = json[j].title;
+                    col.appendChild(title);
+
+                    newRow.appendChild(col);
+                }
+
+                newCarouselItem.appendChild(newRow);
+                carouselInner.appendChild(newCarouselItem);
+
+                carousel.next();
+            }
+        });
+    });
+    </script>
+    
+
+    <!-- <div id="carouselExampleIndicators3" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -240,184 +613,72 @@ layout: base
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                    <div class="col">
-                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">세이노의 가르침</div>
+        <div class="container text-center">
+            <div class="recbook">
+                <나에게 추천해주는 도서>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">세이노의 가르침</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">헤아림의 조각들</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">익명소설</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook29.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">점프 투 파이썬</div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">헤아림의 조각들</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">익명소설</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">점프 투 파이썬</div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+                            <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">세이노의 가르침</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">헤아림의 조각들</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">익명소설</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook29.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
+                        </div>
+                        <div class="col">
+                            <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
+                            <div class="p-3">점프 투 파이썬</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                    <div class="col">
-                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">세이노의 가르침</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">헤아림의 조각들</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">익명소설</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">점프 투 파이썬</div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                    <div class="col">
-                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">세이노의 가르침</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">헤아림의 조각들</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">익명소설</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">점프 투 파이썬</div>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                    <div class="col">
-                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">세이노의 가르침</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">헤아림의 조각들</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">익명소설</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">점프 투 파이썬</div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                    <div class="col">
-                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">세이노의 가르침</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">헤아림의 조각들</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">익명소설</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">점프 투 파이썬</div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                    <div class="col">
-                        <img src="img/bestbook1.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">세이노의 가르침</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook2.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">헤아림의 조각들</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook3.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">익명소설</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook4.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">챗GPT, 질문이 돈이 되는 세상</div>
-                    </div>
-                    <div class="col">
-                        <img src="img/bestbook5.png" class="img-fluid" alt="베스트셀러">
-                        <div class="p-3">점프 투 파이썬</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-<div></br></br></br></br></br></br></br></br></br></br></div>
+    </div> -->
+
+    <div></br></br></br></br></br></br></br></br></br></br></div>
 </body>

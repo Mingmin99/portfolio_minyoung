@@ -1,0 +1,36 @@
+[
+    {
+        "title" : "세이노의 가르침",
+        "image" : "img/bestbook1.png" 
+    },
+    {
+        "title" : "헤아림의 조각들",
+        "image" : "img/bestbook2.png" 
+    },{
+        "title" : "익명소설",
+        "image" : "img/bestbook3.png" 
+    },{
+        "title" : "디베이트",
+        "image" : "img/bestbook4.png" 
+    }
+    ,{
+        "title" : "점프 투 파이썬",
+        "image" : "img/bestbook5.png" 
+    }
+    ,{
+        "title" : "역행",
+        "image" : "img/bestbook6.png" 
+    },{
+        "title" : "도둑맞은 집중력",
+        "image" : "img/bestbook7.png" 
+    },{
+        "title" : "눈부신 안부",
+        "image" : "img/bestbook8.png" 
+    },{
+        "title" : "도파미네이션",
+        "image" : "img/bestbook9.png" 
+    },{
+        "title" : "영어 필사 100일의 기적",
+        "image" : "img/bestbook10.png" 
+    }
+]

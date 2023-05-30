@@ -1,0 +1,37 @@
+[
+   {
+        "title" : "하늘과 바람과 별과",
+        "image" : "img/bestbook11.png" 
+    },{
+        "title" : "맡겨진 아이",
+        "image" : "img/bestbook12.png" 
+    },{
+        "title" : "풍수전쟁",
+        "image" : "img/bestbook13.png" 
+    },{
+        "title" : "돈은, 너로부터",
+        "image" : "img/bestbook14.png" 
+    },{
+        "title" : "물고기는 존재하지 않는다.",
+        "image" : "img/bestbook15.png" 
+    },{
+        "title": "인류의 여정",
+        "image": "img/bestbook16.png"
+    },
+    {
+        "title": "흔한 남매",
+        "image": "img/bestbook17.png"
+    },
+    {
+        "title": "사장학개론",
+        "image": "img/bestbook18.png"
+    },
+    {
+        "title": "모성",
+        "image": "img/bestbook19.png"
+    },
+    {
+        "title": "Git 교과서",
+        "image": "img/bestbook20.png"
+    }
+]
