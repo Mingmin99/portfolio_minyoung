@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 80%;
+            border: solid;
+        }
+
+        table thead th {
+            background-color: rgb(67, 61, 61);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table tbody td {
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: rgb(255, 240, 139);
+        }
+
+        table tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: lightgray;
+            text-decoration: none;
+            color: black;
+        }
+
+        .pagination a.active {
+            background-color: rgb(44, 39, 39);
+            color: white;
+        }
+
+        .selected {
+            background-color: rgb(231, 124, 124) !important;
+        }
+
+        .dragging {
+            background-color: rgb(229, 229, 167);
+        }
+    </style>
+</head>
+
+<body>
+    <table id="forumTable" class="table">
+        <thead>
+            <tr>
+                <th>
+                    <label><input type="checkbox" id="selectAll"></label>
+                </th>
+                <th>Id</th>
+                <th>타이틀</th>
+            </tr>
+        </thead>
+        <tbody id="forumData"></tbody>
+    </table>
+    <div id="pagination" class="pagination"></div>
+    <script>
+        function getHttpRequest(url, callback) {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function (event) {
+                if (request.readyState == 4) {
+                    if (request.status == 200) {
+                        // 요청이 정상적으로 처리 된 경우
+                        callback(request.responseText);
+                    } else {
+                        // 에러가 발생한 경우
+                    }
+                }
+            }
+
+            const method = "GET";
+            request.open('get', url, true);
+            request.send();
+        }
+
+        const url = "forum.json";
+        getHttpRequest(url, function (response) {
+            // 문자열, 자바스크립트 객체로 변경
+            var json = JSON.parse(response);
+
+            // 페이지네이션 생성
+            createPagination(json.length);
+
+            // 초기 데이터 로드
+            loadPageData(1);
+
+            function loadPageData(page) {
+                const startIndex = (page - 1) * 10;
+                const endIndex = startIndex + 10;
+                const slicedData = json.slice(startIndex, endIndex);
+
+                // 기존 데이터 삭제
+                const forumDataElement = document.getElementById('forumData');
+                forumDataElement.innerHTML = '';
+
+                // 데이터 추가
+                slicedData.forEach(data => {
+                    const row = document.createElement('tr');
+
+                    const checkboxTd = document.createElement('td');
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        row.classList.toggle('selected');
+                        updateSelectAllCheckbox();
+                    });
+                    checkboxTd.appendChild(checkbox);
+                    row.appendChild(checkboxTd);
+
+                    const idTd = document.createElement('td');
+                    idTd.textContent = data.id;
+                    row.appendChild(idTd);
+
+                    const titleTd = document.createElement('td');
+                    titleTd.textContent = data.title;
+                    row.appendChild(titleTd);
+
+                    row.addEventListener('mousedown', function (event) {
+                        if (checkbox.checked) {
+                            startDrag(row, event);
+                        }
+                    });
+
+                    forumDataElement.appendChild(row);
+                });
+            }
+
+            function updateSelectAllCheckbox() {
+                const checkboxes = document.querySelectorAll('#forumData input[type="checkbox"]');
+                const selectedCheckboxes = document.querySelectorAll('#forumData input[type="checkbox"]:checked');
+                const selectAllCheckbox = document.getElementById('selectAll');
+                selectAllCheckbox.checked = checkboxes.length === selectedCheckboxes.length;
+            }
+
+            function createPagination(totalCount) {
+                const itemsPerPage = 10; // 페이지당 아이템 수
+                const totalPages = Math.ceil(totalCount / itemsPerPage); // 전체 페이지 수
+                const paginationElement = document.getElementById('pagination');
+
+                paginationElement.innerHTML = '';
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageLink = document.createElement('a');
+                    pageLink.href = '#';
+                    pageLink.textContent = i;
+
+                    pageLink.addEventListener('click', function () {
+                        loadPageData(i);
+                        clearSelection();
+                        updateSelectAllCheckbox();
+                    });
+
+                    paginationElement.appendChild(pageLink);
+                }
+            }
+
+            function clearSelection() {
+                const selectedRows = document.querySelectorAll('#forumData tr.selected');
+                selectedRows.forEach(row => {
+                    row.classList.remove('selected');
+                });
+            }
+
+            const selectAllCheckbox = document.getElementById('selectAll');
+            selectAllCheckbox.addEventListener('click', function () {
+                const checkboxes = document.querySelectorAll('#forumData input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = selectAllCheckbox.checked;
+                    const row = checkbox.parentNode.parentNode;
+                    if (selectAllCheckbox.checked) {
+                        row.classList.add('selected');
+                    } else {
+                        row.classList.remove('selected');
+                    }
+                });
+            });
+
+            let isDragging = false;
+            let initialY;
+            let startRowIndex;
+            let draggedElement = null;
+            let prevIndex = null;
+
+            function startDrag(row, event) {
+                isDragging = true;
+                initialY = event.clientY;
+                startRowIndex = getIndex(row);
+                draggedElement = row;
+                prevIndex = Array.from(row.parentNode.children).indexOf(row);
+                row.classList.add('dragging');
+                document.addEventListener('mousemove', handleDrag);
+                document.addEventListener('mouseup', stopDrag);
+            }
+
+            function handleDrag(event) {
+                if (isDragging) {
+                    const currentY = event.clientY;
+                    const offset = currentY - initialY;
+                    const currentIndex = Math.floor(offset / 20);
+                    const targetRowIndex = startRowIndex + currentIndex;
+
+                    const rows = document.querySelectorAll('#forumData tr');
+                    const targetRow = rows[targetRowIndex];
+                    if (targetRow && targetRow !== rows[startRowIndex]) {
+                        if (currentIndex > prevIndex) {
+                            targetRow.parentNode.insertBefore(draggedElement, targetRow.nextSibling);
+                        } else {
+                            targetRow.parentNode.insertBefore(draggedElement, targetRow);
+                        }
+                        prevIndex = currentIndex;
+                    }
+                }
+            }
+
+            function stopDrag() {
+                isDragging = false;
+                draggedElement.classList.remove('dragging');
+                draggedElement = null;
+                prevIndex = null;
+                document.removeEventListener('mousemove', handleDrag);
+                document.removeEventListener('mouseup', stopDrag);
+            }
+
+            function getIndex(row) {
+                const rows = document.querySelectorAll('#forumData tr');
+                return Array.from(rows).indexOf(row);
+            }
+        });
+    </script>
+</body>
+
+</html>
